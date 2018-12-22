@@ -1,0 +1,17 @@
+<nb-layout>
+  <nb-layout-column>
+    <div class="login-page">
+      <div class="form">
+        <img class="login-logo" src="assets/images/logo_black.png" alt="Daily Ninja Logo">
+        <form [formGroup]="dnDirectLoginForm" class="login-form">
+          <input type="text" placeholder="Username" formControlName="username"/>
+          <input type="password" placeholder="Password" formControlName="password"/>
+          <button (click)="onLogin()">Login</button>
+        </form>
+        <p *ngIf="formNotValid" style="color: red">Please enter username and password</p>
+        <p *ngIf="credsWrong" style="color: red">Please check your username and password</p>
+      </div>
+    </div>
+  </nb-layout-column>
+</nb-layout>
+
